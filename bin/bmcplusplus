@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+## bmcplusplus - CLI entry point to the HTTP API
+
+# TODO handle pathing ish
+require 'bmcplusplus/bmcplusplus'
+
+require 'net/http'
+require 'optparse'
+
+# TODO this client talks to BmcPlusPlus::Application workers
+
+# TODO add optparse
+config = get_config
+
+# main()
+if __FILE__.eql?($0)
+  # instantiate a bmc++ object
+  bmc = BmcPlusPlus::Server.new(config[:ip])
+
+end
