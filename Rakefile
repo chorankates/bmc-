@@ -11,7 +11,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = 'HTTP RESTful API abstracting IPMI commands, running on a Raspberry Pi (or similar)'
   gem.email       = ['choran-kates@salesforce.com', 'conor.code@gmail.com']
   gem.homepage    = 'http://github.com/chorankates/bmcplusbplus'
-  gem.authors     = ['Conor Horan-Kates']
+  gem.authors     = ['Conor Horan-Kates', 'Maureen Long']
   #gem.licenses    =  'MIT' # TODO what license am i supposed to ue again?
 
   gem.executables = ['bmcplusplus']
