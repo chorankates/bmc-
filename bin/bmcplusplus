@@ -7,7 +7,11 @@ require 'bmcplusplus/bmcplusplus'
 require 'net/http'
 require 'optparse'
 
+<<<<<<< HEAD
 # TODO this client talks to BmcPlusPlus::Client workers
+=======
+# TODO this client talks to BmcPlusPlus::Application workers
+>>>>>>> 282c8fba05d152b7f6890958b075f3878ba57416
 
 # TODO add optparse
 config = get_config
@@ -15,6 +19,10 @@ config = get_config
 # main()
 if __FILE__.eql?($0)
   # instantiate a bmc++ object
+<<<<<<< HEAD
   bmc = BmcPlusPlus::Client.new(config[:ip])
+=======
+  bmc = BmcPlusPlus::Server.new(config[:ip])
+>>>>>>> 282c8fba05d152b7f6890958b075f3878ba57416
 
 end
