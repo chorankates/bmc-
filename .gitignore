@@ -1,0 +1,7 @@
+
+# IDE files
+*.idea/*
+
+# generated files
+pkg/*
+logs/*

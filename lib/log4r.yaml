@@ -1,0 +1,35 @@
+---
+log4r_config:
+  loggers:
+    - name: BmcPlusPlus::Server
+      level: DEBUG
+      outputters:
+        - logfile
+        - stderr
+    - name: BmcPlusPlus::Client
+      level: DEBUG
+      outputters:
+        - logfile
+        - stderr
+  outputters:
+    - type: StdoutOutputter
+      name: stdout
+      formatter:
+        date_pattern: '%Y/%m/%d %H:%M.%S'
+        pattern: '%d - %5l - %25c - %m'
+        type: PatternFormatter
+    - type: StderrOutputter
+      name: stderr
+      formatter:
+        date_pattern: '%Y/%m/%d %H:%M.%S'
+        pattern: '%d - %5l - %25C - %m'
+        type: PatternFormatter
+    - type: DateFileOutputter
+      name: logfile
+      date_pattern: '%Y-%m-%d.%H'
+      trunc: false
+      dirname: "#{LOG_ROOT}/"
+      formatter:
+        date_pattern: '%Y/%m/%d %H:%M.%S'
+        pattern: '%d - %5l - %30C - %m'
+        type: PatternFormatter
