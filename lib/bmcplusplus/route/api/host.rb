@@ -5,6 +5,8 @@ module BmcPlusPlus
     module Api
       class Host < BmcPlusPlus::Route::Base
 
+        # TODO need to separate some of these commands from BMC and Host side execution
+
         ## GET
         get '/' do
           # TODO return all information we know about the host
@@ -19,11 +21,15 @@ module BmcPlusPlus
         end
 
         get '/top' do
-          # TODO return `top` output
+          # TODO return host `top` output
         end
 
         get '/ifconfig' do
-          # TODO return `ifconfig` output
+          # TODO return host `ifconfig` output
+        end
+
+        get '/df' do
+          # TODO return `df` output
         end
 
         ## POST

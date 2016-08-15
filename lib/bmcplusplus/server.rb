@@ -1,31 +1,15 @@
 #!/usr/bin/env ruby
-<<<<<<< HEAD
 ## server.rb - runs on raspberry PI, exposes REST API and talks to physical machine through IPMI
 
 require 'sequel'
+require 'sinatra'
 
 require 'bmcplusplus/route/base.rb'
 
 module BmcPlusPlus
+
   class Server
     include BmcPlusPlus::Logger
-
-    attr_reader :bmc, :logger
-
-    def initialize(config)
-      @logger = self.get_logger(self.class)
-
-      # TODO not sure this is exactly right..
-      @bmc = BmcPlusPlus::Model::Bmc.new(config)
-
-      @logger.debug(sprintf('initialized[%s]: [%s]', self.class, self.inspect))
-
-=======
-## bmcplusbplus.rb - library exposing inital entry to BmcPlusPlus module
-
-module BmcPlusPlus
-
-  class Server
 
     attr_reader :logger, :method
 
@@ -45,27 +29,18 @@ module BmcPlusPlus
 
       # TODO should we try and connect?
 
->>>>>>> 282c8fba05d152b7f6890958b075f3878ba57416
     end
 
     def inspect
       {
-<<<<<<< HEAD
         :bmc => @bmc,
-=======
         :method => @method,
->>>>>>> 282c8fba05d152b7f6890958b075f3878ba57416
       }
     end
 
     def to_s
       self.inspect.to_s
     end
-<<<<<<< HEAD
-  end
-=======
 
   end
-
->>>>>>> 282c8fba05d152b7f6890958b075f3878ba57416
 end

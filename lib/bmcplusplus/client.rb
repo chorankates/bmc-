@@ -8,8 +8,6 @@ module BmcPlusPlus
     # TODO should this be a different repository?
     ## probably not, but it does make the entry points/gem requirements a bit different
 
-  end
-
     attr_reader :logger, :ip, :user
 
     def initialize(config)
@@ -21,6 +19,7 @@ module BmcPlusPlus
       @logger = self.get_logger(self.class)
       @logger.debug(sprintf('initialized[%s]: [%s]', self.class, self.inspect))
 
+      # TODO this will be talking to a BmcPlusPlus::Server application over HTTP
       self.connect # TODO should this be optional?
     end
 
@@ -29,5 +28,7 @@ module BmcPlusPlus
     end
 
   end
+
+
 
 end

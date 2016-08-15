@@ -17,7 +17,6 @@ module BmcPlusPlus
           # TODO return :lines lines
         end
 
-
         ## POST
         # TODO this is going to be the tricky bit
 
@@ -26,7 +25,7 @@ module BmcPlusPlus
         end
 
 
-        ## unhandled
+        ## TODO unhandled methods go here
 
       end
     end

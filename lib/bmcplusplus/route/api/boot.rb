@@ -23,6 +23,8 @@ module BmcPlusPlus
           # TODO set the boot mode to :mode
         end
 
+        # TODO how do we want to expose a 'reboot' command? should it just remain under power.rb? or should we have a forwarder here?
+
 
 
         ## unhandled
